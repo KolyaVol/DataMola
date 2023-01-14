@@ -58,24 +58,25 @@ body {
 	border-radius: 0.3rem;
 	margin: 0.6rem;
 	border: #000 4px solid;
-	transition: all 1s;
+	transition: transform margin 1s;
 	top: 0;
+	animation: box-animate 6s infinite;
 }
 
 .burger.active .burger__icon > div {
-	transition: all 1s;
+	transition: transform margin 1s;
 	transform: rotate(45deg);
 	margin-top: -1.45rem;
 }
 
 .burger.active .burger__icon::before {
-	transition: all 1s;
+	transition: transform margin 1s;
 	transform: rotate(-45deg);
 	margin-top: 2rem;
 }
 
 .burger.active .burger__icon::after {
-	transition: all 1s;
+	transition: transform margin 1s;
 	top: -1.5rem;
 	opacity: 0;
 }
@@ -233,5 +234,30 @@ body {
 	100% {
 		color: rgb(202, 33, 224);
 		text-shadow: 0 0 0.1rem rgb(224, 33, 97), 0 0 0.4rem rgb(202, 33, 224), 0 0 1rem rgb(188, 42, 207);
+	}
+}
+
+@keyframes box-animate {
+	0% {
+		border-color: rgb(202, 33, 224);
+		box-shadow: 0 0 0.1rem rgb(224, 33, 97), 0 0 0.4rem rgb(202, 33, 224), 0 0 1rem rgb(188, 42, 207);
+	}
+	25% {
+		border-color: rgb(92, 17, 189);
+		box-shadow: 0 0 1rem rgb(92, 17, 189), 0 0 0.4rem rgb(92, 17, 189), 0 0 1rem rgb(132, 44, 248);
+	}
+
+	50% {
+		border-color: rgb(45, 3, 161);
+		box-shadow: 0 0 1rem rgb(45, 3, 161), 0 0 0.4rem rgb(45, 3, 161), rgb(100, 49, 241);
+	}
+	75% {
+		border-color: rgb(92, 17, 189);
+		box-shadow: 0 0 1rem rgb(92, 17, 189), 0 0 0.4rem rgb(92, 17, 189), 0 0 1rem rgb(132, 44, 248);
+	}
+
+	100% {
+		border-color: rgb(202, 33, 224);
+		box-shadow: 0 0 0.1rem rgb(224, 33, 97), 0 0 0.4rem rgb(202, 33, 224), 0 0 1rem rgb(188, 42, 207);
 	}
 }
