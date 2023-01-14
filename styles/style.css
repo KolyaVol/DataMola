@@ -1,4 +1,3 @@
-
 * {
 	margin: 0;
 	padding: 0;
@@ -21,7 +20,6 @@ body {
 		". about-me . "
 		". skills ."
 		". projectList .";
-
 }
 
 .burger {
@@ -64,29 +62,23 @@ body {
 	top: 0;
 }
 
-.burger.active .burger__icon > div
-{
+.burger.active .burger__icon > div {
 	transition: all 1s;
 	transform: rotate(45deg);
 	margin-top: -1.45rem;
 }
 
-.burger.active .burger__icon::before
-{
+.burger.active .burger__icon::before {
 	transition: all 1s;
 	transform: rotate(-45deg);
 	margin-top: 2rem;
-	
 }
 
-.burger.active .burger__icon::after
-{
+.burger.active .burger__icon::after {
 	transition: all 1s;
 	top: -1.5rem;
 	opacity: 0;
 }
-
-
 
 .nav {
 	width: 100%;
@@ -115,13 +107,14 @@ body {
 }
 
 .header__name {
+	cursor: default;
 	position: absolute;
 	margin: auto;
 	font-size: 6vw;
+	font-weight: 700;
 	font-family: "Courier New", Courier, monospace;
+	animation: animate 6s infinite;
 	z-index: 5;
-	cursor: default;
-	
 }
 
 .header__owerlay {
@@ -131,17 +124,12 @@ body {
 	background: url(../Images/tower.jpg) center no-repeat;
 	background-size: cover;
 	background-attachment: fixed;
-	transition: all 3s ;
+	transition: all 3s;
 	z-index: 4;
 }
 
 .header__owerlay:hover {
-	transition: all 0s ;
-	opacity: 0;
-}
-
-.header__name:hover .header__owerlay {
-	transition: all 0s ;
+	transition: all 0s;
 	opacity: 0;
 }
 
@@ -181,24 +169,69 @@ body {
 
 .about-me__photo {
 	grid-area: am-photo;
+	position: relative;
 	object-fit: cover;
-	
 	overflow: hidden;
+	opacity: 0;
+	left: -30vw;
+	transition: all 1s;
 }
 
 .about-me__pers-data {
 	grid-area: pers-data;
+	position: relative;
+	opacity: 0;
+	right: -30vw;
+	transition: all 1s;
 }
 
 .about-me__education {
 	grid-area: education;
+	position: relative;
+	opacity: 0;
+	right: -30vw;
+	transition: all 1s;
+}
+
+.about-me__education.elem-show,
+.about-me__pers-data.elem-show,
+.about-me__photo.elem-show,
+.about-me__descr.elem-show {
+	opacity: 1;
+	right: 0;
+	bottom: 0;
+	left: 0;
 }
 
 .about-me__descr {
 	grid-area: am-descr;
+	position: relative;
+	opacity: 0;
+	bottom: -10vw;
+	transition: all 1s;
 }
 
-.ed {
-	grid-area: education;
-}
+@keyframes animate {
+	0% {
+		color: rgb(202, 33, 224);
+		text-shadow: 0 0 0.1rem rgb(224, 33, 97), 0 0 0.4rem rgb(202, 33, 224), 0 0 1rem rgb(188, 42, 207);
+	}
+	25% {
+		color: rgb(92, 17, 189);
+		text-shadow: 0 0 1rem rgb(92, 17, 189), 0 0 0.4rem rgb(92, 17, 189), 0 0 1rem rgb(132, 44, 248);
+	}
 
+	50% {
+		color: rgb(45, 3, 161);
+		text-shadow: 0 0 1rem rgb(45, 3, 161), 0 0 0.4rem rgb(45, 3, 161), rgb(100, 49, 241);
+	}
+	75% {
+		color: rgb(92, 17, 189);
+		text-shadow: 0 0 1rem rgb(92, 17, 189), 0 0 0.4rem rgb(92, 17, 189), 0 0 1rem rgb(132, 44, 248);
+	}
+
+	100% {
+		color: rgb(202, 33, 224);
+		text-shadow: 0 0 0.1rem rgb(224, 33, 97), 0 0 0.4rem rgb(202, 33, 224), 0 0 1rem rgb(188, 42, 207);
+	}
+}
