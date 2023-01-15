@@ -9,10 +9,8 @@
 		<title>Portfolio</title>
 	</head>
 	<body>
-		<header class="header">
-			<div class="header__name">Nikolai Valoshchik
-				
-			</div>
+		<header class="header" id="header">
+			<div class="header__name">Nikolai Valoshchik</div>
 
 			<div class="header__owerlay"></div>
 			<div class="header__owerlay"></div>
@@ -66,10 +64,14 @@
 			<div class="header__owerlay"></div>
 		</header>
 
-		<main class="about-me">
+		<main class="about-me" id="about-me">
 			<h3 class="about-me__title">ABOUT ME</h3>
 
-			<img class="about-me__photo animation" src="./Images/dragon.jpg" alt="my photo"></img>
+			<img
+				class="about-me__photo animation"
+				src="./Images/dragon.jpg"
+				alt="my photo"
+			/>
 
 			<article class="about-me__pers-data animation">
 				<h3>Personal information</h3>
@@ -88,7 +90,14 @@
 		</main>
 
 		<div class="burger">
-			<nav class="nav"></nav>
+			<nav class="nav">
+				<ul class="nav__list">
+					<li><a href="#header">Home</a></li>
+					<li><a href="#about-me">About me</a></li>
+					<li><a href="#skills">Skills</a></li>
+					<li><a href="#contacts">Contacts</a></li>
+				</ul>
+			</nav>
 			<div class="burger__icon">
 				<div></div>
 			</div>

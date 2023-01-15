@@ -1,11 +1,17 @@
+:root {
+	--font-size:3vw;
+	--shadow: 0 0 1em rgb(124, 124, 160), 0 0 0.2em rgb(141, 141, 165);
+}
+
 * {
 	margin: 0;
-	padding: 0;
+	padding: 0;	
 }
 
 html {
 	font-size: 10px;
-	text-shadow: 0 0 1em rgb(124, 124, 160), 0 0 0.2em rgb(141, 141, 165);
+	text-shadow: var(--shadow);
+	scroll-behavior: smooth;
 }
 
 body {
@@ -95,6 +101,28 @@ body {
 	transition: all 2s;
 }
 
+.nav__list {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	margin-top: 2vh;
+}
+
+.nav__list li {
+	list-style-type: none;
+	
+	
+
+}
+
+.nav__list li > a {
+	cursor: pointer;
+	text-decoration: none;
+	font-size: calc(var(--font-size)*2/3);
+	color: red;
+}
+
 .header {
 	grid-area: header;
 	position: relative;
@@ -111,7 +139,7 @@ body {
 	cursor: default;
 	position: absolute;
 	margin: auto;
-	font-size: 6vw;
+	font-size: calc(var(--font-size)*2);
 	font-weight: 700;
 	font-family: "Courier New", Courier, monospace;
 	animation: animate 6s infinite;
@@ -155,8 +183,8 @@ body {
 	width: 100%;
 	height: 100%;
 	border-radius: 2rem;
-	box-shadow: 0 0 1em rgb(124, 124, 160), 0 0 0.2em rgb(141, 141, 165);
-	font-size: 2vw;
+	box-shadow: var(--shadow);
+	font-size: calc(var(--font-size)*2/3);
 }
 
 .about-me > article {
@@ -165,7 +193,7 @@ body {
 
 .about-me__title {
 	grid-area: am-title;
-	font-size: 3vw;
+	font-size: var(--font-size);
 }
 
 .about-me__photo {
@@ -215,49 +243,65 @@ body {
 @keyframes animate {
 	0% {
 		color: rgb(202, 33, 224);
-		text-shadow: 0 0 0.1rem rgb(224, 33, 97), 0 0 0.4rem rgb(202, 33, 224), 0 0 1rem rgb(188, 42, 207);
+		text-shadow: 0 0 0.1rem rgb(224, 33, 97), 0 0 0.4rem rgb(202, 33, 224),
+			0 0 1rem rgb(188, 42, 207);
 	}
 	25% {
 		color: rgb(92, 17, 189);
-		text-shadow: 0 0 1rem rgb(92, 17, 189), 0 0 0.4rem rgb(92, 17, 189), 0 0 1rem rgb(132, 44, 248);
+		text-shadow: 0 0 1rem rgb(92, 17, 189), 0 0 0.4rem rgb(92, 17, 189),
+			0 0 1rem rgb(132, 44, 248);
 	}
 
 	50% {
 		color: rgb(45, 3, 161);
-		text-shadow: 0 0 1rem rgb(45, 3, 161), 0 0 0.4rem rgb(45, 3, 161), rgb(100, 49, 241);
+		text-shadow: 0 0 1rem rgb(45, 3, 161), 0 0 0.4rem rgb(45, 3, 161),
+			rgb(100, 49, 241);
 	}
 	75% {
 		color: rgb(92, 17, 189);
-		text-shadow: 0 0 1rem rgb(92, 17, 189), 0 0 0.4rem rgb(92, 17, 189), 0 0 1rem rgb(132, 44, 248);
+		text-shadow: 0 0 1rem rgb(92, 17, 189), 0 0 0.4rem rgb(92, 17, 189),
+			0 0 1rem rgb(132, 44, 248);
 	}
 
 	100% {
 		color: rgb(202, 33, 224);
-		text-shadow: 0 0 0.1rem rgb(224, 33, 97), 0 0 0.4rem rgb(202, 33, 224), 0 0 1rem rgb(188, 42, 207);
+		text-shadow: 0 0 0.1rem rgb(224, 33, 97), 0 0 0.4rem rgb(202, 33, 224),
+			0 0 1rem rgb(188, 42, 207);
 	}
 }
 
 @keyframes box-animate {
 	0% {
 		border-color: rgb(202, 33, 224);
-		box-shadow: 0 0 0.1rem rgb(224, 33, 97), 0 0 0.4rem rgb(202, 33, 224), 0 0 1rem rgb(188, 42, 207);
+		box-shadow: 0 0 0.1rem rgb(224, 33, 97), 0 0 0.4rem rgb(202, 33, 224),
+			0 0 1rem rgb(188, 42, 207);
 	}
 	25% {
 		border-color: rgb(92, 17, 189);
-		box-shadow: 0 0 1rem rgb(92, 17, 189), 0 0 0.4rem rgb(92, 17, 189), 0 0 1rem rgb(132, 44, 248);
+		box-shadow: 0 0 1rem rgb(92, 17, 189), 0 0 0.4rem rgb(92, 17, 189),
+			0 0 1rem rgb(132, 44, 248);
 	}
 
 	50% {
 		border-color: rgb(45, 3, 161);
-		box-shadow: 0 0 1rem rgb(45, 3, 161), 0 0 0.4rem rgb(45, 3, 161), rgb(100, 49, 241);
+		box-shadow: 0 0 1rem rgb(45, 3, 161), 0 0 0.4rem rgb(45, 3, 161),
+			rgb(100, 49, 241);
 	}
 	75% {
 		border-color: rgb(92, 17, 189);
-		box-shadow: 0 0 1rem rgb(92, 17, 189), 0 0 0.4rem rgb(92, 17, 189), 0 0 1rem rgb(132, 44, 248);
+		box-shadow: 0 0 1rem rgb(92, 17, 189), 0 0 0.4rem rgb(92, 17, 189),
+			0 0 1rem rgb(132, 44, 248);
 	}
 
 	100% {
 		border-color: rgb(202, 33, 224);
-		box-shadow: 0 0 0.1rem rgb(224, 33, 97), 0 0 0.4rem rgb(202, 33, 224), 0 0 1rem rgb(188, 42, 207);
+		box-shadow: 0 0 0.1rem rgb(224, 33, 97), 0 0 0.4rem rgb(202, 33, 224),
+			0 0 1rem rgb(188, 42, 207);
+	}
+}
+
+@media (max-width: 700px) {
+	:root {
+		--font-size:4vw
 	}
 }
