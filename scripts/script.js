@@ -38,6 +38,7 @@ const draw = () => {
 	skill.classList.add("a");
 	skill.style.left = offset * 10 + "vw";
 	document.querySelector(".skills__list").appendChild(skill);
+	
 	step + 1 === skillsArr.length ? (step = 0) : step++;
 	offset++;
 };
@@ -54,12 +55,12 @@ const moveLeft = () => {
 		secondOffset++;
 	});
 	allSkills[0].classList.add('transparent')
-	allSkills[allSkills.length-1].classList.add("transparent");
-	allSkills[allSkills.length - 1].classList.remove("transparent");
+	allSkills[allSkills.length-1].classList.add("anim1");
+	
 	setTimeout(() => {
-		
 		allSkills[0].remove();
-	}, 1000);
+		allSkills[allSkills.length - 1].classList.remove("anim1");
+	}, 3000);
 	
 };
 
