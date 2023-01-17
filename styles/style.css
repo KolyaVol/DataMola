@@ -259,25 +259,42 @@ font-size: var(--font-size);
 	width: 10vw;
 	position: absolute;
 	left: 0;
-	transition: all ease 3s;
+	transition: all ease 2s;
 }
 
 .transparent {
 	opacity: 0;
 }
 
-.anim1 {
-	animation: anim 3s ease forwards;
+.slider-right {
+	animation: slider-right 2s ease forwards;
 }
 
-@keyframes anim {
+.slider-left {
+	animation: slider-left 2s ease forwards;
+}
+
+@keyframes slider-right {
 	0% {
+		transform: rotate3d(0, 1, 0, 70deg);
 		margin-left: 10vw;
 		opacity: 0;
 	}
 	100% {
+		transform: rotate3d(0, 1, 0, 0);
 		margin-left: 0;
 		opacity: 1;
+	}
+}
+
+@keyframes slider-left {
+	0% {
+		transform: rotate3d(0, 1, 0, 0);
+		opacity: 1;
+	}
+	100% {
+		transform: rotate3d(0, 1, 0, 70deg);
+		opacity: 0;
 	}
 }
 
