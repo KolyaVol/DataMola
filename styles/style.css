@@ -1,14 +1,13 @@
-
 * {
 	margin: 0;
-	padding: 0;	
+	padding: 0;
 }
 
 html {
 	font-size: 10px;
 	text-shadow: var(--shadow);
 	scroll-behavior: smooth;
-	--font-size:3vw;
+	--font-size: 3vw;
 	--shadow: 0 0 1em rgb(124, 124, 160), 0 0 0.2em rgb(141, 141, 165);
 }
 
@@ -114,7 +113,7 @@ body {
 .nav__list li > a {
 	cursor: pointer;
 	text-decoration: none;
-	font-size: calc(var(--font-size)*2/3);
+	font-size: calc(var(--font-size) * 2 / 3);
 	color: red;
 }
 
@@ -134,7 +133,7 @@ body {
 	cursor: default;
 	position: absolute;
 	margin: auto;
-	font-size: calc(var(--font-size)*2);
+	font-size: calc(var(--font-size) * 2);
 	font-weight: 700;
 	font-family: "Courier New", Courier, monospace;
 	animation: animate 6s infinite;
@@ -179,7 +178,7 @@ body {
 	height: 100%;
 	border-radius: 2rem;
 	box-shadow: var(--shadow);
-	font-size: calc(var(--font-size)*2/3);
+	font-size: calc(var(--font-size) * 2 / 3);
 }
 
 .about-me > article {
@@ -239,27 +238,25 @@ body {
 	grid-area: skills;
 }
 
-.skills ul {
+.skills__list {
 	display: flex;
 	justify-content: space-evenly;
 	align-items: center;
 	width: 100%;
 	height: 100%;
 	position: relative;
-	transition: all 2s;
+	
 }
 
-.skills li {
-list-style-type: none;
-font-size: var(--font-size);
-}
-
-.a {
-	text-align: center;
-	width: 10vw;
+.skills__item {
 	position: absolute;
 	left: 0;
-	transition: all ease 2s;
+	width: 10vw;
+	text-align: center;
+	transition: all linear 2s;
+	list-style-type: none;
+	font-size: var(--font-size);
+	cursor: pointer;
 }
 
 .transparent {
@@ -267,11 +264,11 @@ font-size: var(--font-size);
 }
 
 .slider-right {
-	animation: slider-right 2s ease forwards;
+	animation: slider-right 2s linear forwards;
 }
 
 .slider-left {
-	animation: slider-left 2s ease forwards;
+	animation: slider-left 2s linear forwards;
 }
 
 @keyframes slider-right {
@@ -359,16 +356,16 @@ font-size: var(--font-size);
 }
 
 @keyframes skills-rotation {
-0% {
-	translate: 0;
-}
-100%{ 
-	translate: -100rem 0;
-}
+	0% {
+		translate: 0;
+	}
+	100% {
+		translate: -100rem 0;
+	}
 }
 
 @media (max-width: 700px) {
 	:root {
-		--font-size:4vw
+		--font-size: 4vw;
 	}
 }
