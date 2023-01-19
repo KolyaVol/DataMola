@@ -1,4 +1,3 @@
-
 const skillsArr = [];
 
 Array.from(document.querySelectorAll(".skills__item")).map((item) => {
