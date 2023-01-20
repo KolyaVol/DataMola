@@ -8,24 +8,20 @@ const drawOwerlayItem = () => {
 };
 
 const drawFullOwerlay = () => {
-	
-		if (deviceWidth<1000) {
-			for (let i = 0; i < 21; i++) {
-				drawOwerlayItem();
-			}
-		} else {
-			for (let i = 0; i < 51; i++) {
-				drawOwerlayItem();
-			}
+	if (deviceWidth < 700) {
+		for (let i = 0; i < 21; i++) {
+			drawOwerlayItem();
 		}
-
-		
-	
+	} else {
+		for (let i = 0; i < 51; i++) {
+			drawOwerlayItem();
+		}
+	}
 };
 
 drawFullOwerlay();
 
-setInterval(console.log(deviceWidth), 1000)
+setInterval(console.log(deviceWidth), 1000);
 
 const burger = document.querySelector(".burger");
 const nav = document.querySelector(".nav");
