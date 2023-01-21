@@ -1,0 +1,77 @@
+.about-me {
+	grid-area: about-me;
+	display: grid;
+	grid-template-columns: repeat(2, minmax(15rem, 1fr));
+	grid-template-rows: 1fr 2fr 3fr 3fr;
+	grid-template-areas:
+		"am-title am-title"
+		"am-photo pers-data"
+		"am-photo education"
+		"am-descr am-descr";
+	grid-gap: 3rem;
+	align-items: center;
+	margin: 5vh 0;
+}
+
+.about-me > article,
+.about-me > img {
+	box-sizing: border-box;
+	width: 100%;
+	height: 100%;
+	border-radius: 2rem;
+	box-shadow: var(--shadow);
+	font-size: calc(var(--font-size) * 2 / 3);
+}
+
+.about-me > article {
+	padding: 2rem;
+}
+
+.about-me__title {
+	grid-area: am-title;
+	font-size: var(--font-size);
+}
+
+.about-me__photo {
+	grid-area: am-photo;
+	position: relative;
+	object-fit: cover;
+	overflow: hidden;
+	opacity: 0;
+	left: -30vw;
+	transition: all 1s;
+}
+
+.about-me__pers-data {
+	grid-area: pers-data;
+	position: relative;
+	opacity: 0;
+	right: -30vw;
+	transition: all 1s;
+}
+
+.about-me__education {
+	grid-area: education;
+	position: relative;
+	opacity: 0;
+	right: -30vw;
+	transition: all 1s;
+}
+
+.about-me__education.elem-show,
+.about-me__pers-data.elem-show,
+.about-me__photo.elem-show,
+.about-me__descr.elem-show {
+	opacity: 1;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
+.about-me__descr {
+	grid-area: am-descr;
+	position: relative;
+	opacity: 0;
+	bottom: -10vw;
+	transition: all 1s;
+}

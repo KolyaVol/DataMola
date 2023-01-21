@@ -1,0 +1,69 @@
+.header {
+	grid-area: header;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	background: url(../Images/dragon.jpg) center no-repeat;
+	background-size: cover;
+	z-index: 3;
+}
+
+.header__name {
+	cursor: default;
+	position: absolute;
+	margin: auto;
+	font-size: calc(var(--font-size) * 2);
+	font-weight: 700;
+	font-family: "Courier New", Courier, monospace;
+	animation: flicker 6s infinite;
+	z-index: 5;
+}
+
+.header__owerlay {
+	width: 2%;
+	height: 100%;
+	opacity: 1;
+	background: url(../Images/tower.jpg) center no-repeat;
+	background-size: cover;
+	list-style-type: none;
+	background-attachment: fixed;
+	transition: all 3s;
+	z-index: 4;
+}
+
+.header__owerlay:hover {
+	transition: all 0s;
+	opacity: 0;
+}
+
+@keyframes flicker {
+	0% {
+		color: rgb(202, 33, 224);
+		text-shadow: 0 0 0.1rem rgb(224, 33, 97), 0 0 0.4rem rgb(202, 33, 224),
+			0 0 1rem rgb(188, 42, 207);
+	}
+	25% {
+		color: rgb(92, 17, 189);
+		text-shadow: 0 0 1rem rgb(92, 17, 189), 0 0 0.4rem rgb(92, 17, 189),
+			0 0 1rem rgb(132, 44, 248);
+	}
+
+	50% {
+		color: rgb(45, 3, 161);
+		text-shadow: 0 0 1rem rgb(45, 3, 161), 0 0 0.4rem rgb(45, 3, 161),
+			rgb(100, 49, 241);
+	}
+	75% {
+		color: rgb(92, 17, 189);
+		text-shadow: 0 0 1rem rgb(92, 17, 189), 0 0 0.4rem rgb(92, 17, 189),
+			0 0 1rem rgb(132, 44, 248);
+	}
+
+	100% {
+		color: rgb(202, 33, 224);
+		text-shadow: 0 0 0.1rem rgb(224, 33, 97), 0 0 0.4rem rgb(202, 33, 224),
+			0 0 1rem rgb(188, 42, 207);
+	}
+}

@@ -1,0 +1,121 @@
+.burger {
+	display: flex;
+	justify-content: space-between;
+	position: fixed;
+	top: 0;
+	left: -15vw;
+	width: 15vw;
+	transition: all 1s ease-in-out;
+	z-index: 6;
+}
+
+.burger.active {
+	transition: all 1s ease-in-out;
+	left: 0;
+}
+
+.burger__icon {
+	position: absolute;
+	right: -6rem;
+	display: flex;
+	flex-direction: column;
+	width: 3vw;
+	height: 2rem;
+	margin: 1rem 0 0 1rem;
+	cursor: pointer;
+}
+
+.burger__icon > div,
+.burger__icon::before,
+.burger__icon::after {
+	content: "";
+	position: relative;
+	width: 100%;
+	border-radius: 0.3rem;
+	margin: 0.6rem;
+	border: #000 4px solid;
+	transition: transform margin 1s;
+	top: 0;
+	animation: box-flicker 6s infinite;
+}
+
+.burger.active .burger__icon > div {
+	transition: transform margin 1s;
+	transform: rotate(45deg);
+	margin-top: -1.45rem;
+}
+
+.burger.active .burger__icon::before {
+	transition: transform margin 1s;
+	transform: rotate(-45deg);
+	margin-top: 2rem;
+}
+
+.burger.active .burger__icon::after {
+	transition: transform margin 1s;
+	top: -1.5rem;
+	opacity: 0;
+}
+
+.nav {
+	width: 100%;
+	height: 100vh;
+	background-color: #fff;
+	transition: all 1s ease-in-out;
+	opacity: 0;
+	transition: all 2s;
+}
+
+.nav.active {
+	opacity: 1;
+	transition: all 2s;
+}
+
+.nav__list {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	margin-top: 2vh;
+}
+
+.nav__list li {
+	list-style-type: none;
+}
+
+.nav__list li > a {
+	cursor: pointer;
+	text-decoration: none;
+	font-size: calc(var(--font-size) * 2 / 3);
+	color: red;
+}
+
+@keyframes box-flicker {
+	0% {
+		border-color: rgb(202, 33, 224);
+		box-shadow: 0 0 0.1rem rgb(224, 33, 97), 0 0 0.4rem rgb(202, 33, 224),
+			0 0 1rem rgb(188, 42, 207);
+	}
+	25% {
+		border-color: rgb(92, 17, 189);
+		box-shadow: 0 0 1rem rgb(92, 17, 189), 0 0 0.4rem rgb(92, 17, 189),
+			0 0 1rem rgb(132, 44, 248);
+	}
+
+	50% {
+		border-color: rgb(45, 3, 161);
+		box-shadow: 0 0 1rem rgb(45, 3, 161), 0 0 0.4rem rgb(45, 3, 161),
+			rgb(100, 49, 241);
+	}
+	75% {
+		border-color: rgb(92, 17, 189);
+		box-shadow: 0 0 1rem rgb(92, 17, 189), 0 0 0.4rem rgb(92, 17, 189),
+			0 0 1rem rgb(132, 44, 248);
+	}
+
+	100% {
+		border-color: rgb(202, 33, 224);
+		box-shadow: 0 0 0.1rem rgb(224, 33, 97), 0 0 0.4rem rgb(202, 33, 224),
+			0 0 1rem rgb(188, 42, 207);
+	}
+}
