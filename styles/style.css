@@ -255,7 +255,7 @@ body {
 	left: 0;
 	width: 10vw;
 	text-align: center;
-	transition: all linear 2s, transform ease 1s;
+	transition: all linear 2s, transform ease 1s, scale ease 1s;
 	list-style-type: none;
 	font-size: var(--font-size);
 	cursor: pointer;
@@ -263,7 +263,7 @@ body {
 
 .skills__item:hover {
 	transform: translateY(-2rem);
-	color: blue;
+	scale: 1.2;
 }
 
 .transparent {
@@ -369,4 +369,31 @@ body {
 	.header__owerlay {
 		width: 5%;
 	}
+}
+
+.svg {
+	margin: 0 1vw;
+}
+
+.svg0 {
+	fill: #E34F26;	
+}
+
+.svg1 {
+	fill: #1572B6;	
+}
+.svg2 {
+	fill: #F05032;	
+}
+.svg3 {
+	fill: #F7DF1E;	
+}
+.svg4 {
+	fill: #61DAFB;	
+}
+.svg5 {
+	fill: #764ABC;	
+}
+.svg6 {
+	fill: #3178C6;	
 }
