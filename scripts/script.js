@@ -21,8 +21,6 @@ const drawFullOwerlay = () => {
 
 drawFullOwerlay();
 
-setInterval(console.log(deviceWidth), 1000);
-
 const burger = document.querySelector(".burger");
 const nav = document.querySelector(".nav");
 const burgerIcon = document.querySelector(".burger__icon");

@@ -46,7 +46,7 @@
 	grid-area: pers-data;
 	position: relative;
 	opacity: 0;
-	right: -30vw;
+	margin-left: 15vw;
 	transition: all 1s;
 }
 
@@ -54,7 +54,7 @@
 	grid-area: education;
 	position: relative;
 	opacity: 0;
-	right: -30vw;
+	margin-left: 15vw;
 	transition: all 1s;
 }
 
@@ -63,7 +63,7 @@
 .about-me__photo.elem-show,
 .about-me__descr.elem-show {
 	opacity: 1;
-	right: 0;
+	margin-left: 0;
 	bottom: 0;
 	left: 0;
 }
