@@ -1,4 +1,5 @@
-const svgArr = [
+const skillsList = document.querySelector(".skills__list");
+const pathArr = [
 	"M1.5 0h21l-1.91 21.563L11.977 24l-8.564-2.438L1.5 0zm7.031 9.75-.232-2.718 10.059.003.23-2.622L5.412 4.41l.698 8.01h9.126l-.326 3.426-2.91.804-2.955-.81-.188-2.11H6.248l.33 4.171L12 19.351l5.379-1.443.744-8.157H8.531z",
 	"M1.5 0h21l-1.91 21.563L11.977 24l-8.565-2.438L1.5 0zm17.09 4.413L5.41 4.41l.213 2.622 10.125.002-.255 2.716h-6.64l.24 2.573h6.182l-.366 3.523-2.91.804-2.956-.81-.188-2.11h-2.61l.29 3.855L12 19.288l5.373-1.53L18.59 4.414z",
 	"M23.546 10.93 13.067.452a1.55 1.55 0 0 0-2.188 0L8.708 2.627l2.76 2.76a1.838 1.838 0 0 1 2.327 2.341l2.658 2.66a1.838 1.838 0 0 1 1.9 3.039 1.837 1.837 0 0 1-2.6 0 1.846 1.846 0 0 1-.404-1.996L12.86 8.955v6.525c.176.086.342.203.488.348a1.848 1.848 0 0 1 0 2.6 1.844 1.844 0 0 1-2.609 0 1.834 1.834 0 0 1 0-2.598c.182-.18.387-.316.605-.406V8.835a1.834 1.834 0 0 1-.996-2.41L7.636 3.7.45 10.881c-.6.605-.6 1.584 0 2.189l10.48 10.477a1.545 1.545 0 0 0 2.186 0l10.43-10.43a1.544 1.544 0 0 0 0-2.187",
@@ -7,13 +8,14 @@ const svgArr = [
 	"M16.634 16.504c.87-.075 1.543-.84 1.5-1.754-.047-.914-.796-1.648-1.709-1.648h-.061a1.71 1.71 0 0 0-1.648 1.769c.03.479.226.869.494 1.153-1.048 2.038-2.621 3.536-5.005 4.795-1.603.838-3.296 1.154-4.944.93-1.378-.195-2.456-.81-3.116-1.799-.988-1.499-1.078-3.116-.255-4.734.6-1.17 1.499-2.023 2.099-2.443a9.96 9.96 0 0 1-.42-1.543C-.868 14.408-.416 18.752.932 20.805c1.004 1.498 3.057 2.456 5.304 2.456.6 0 1.23-.044 1.843-.194 3.897-.749 6.848-3.086 8.541-6.532zm5.348-3.746c-2.32-2.728-5.738-4.226-9.634-4.226h-.51c-.253-.554-.837-.899-1.498-.899h-.045c-.943 0-1.678.81-1.647 1.753.03.898.794 1.648 1.708 1.648h.074a1.69 1.69 0 0 0 1.499-1.049h.555c2.309 0 4.495.674 6.488 1.992 1.527 1.005 2.622 2.323 3.237 3.897.538 1.288.509 2.547-.045 3.597-.855 1.647-2.294 2.517-4.196 2.517-1.199 0-2.367-.375-2.967-.644-.36.298-.96.793-1.394 1.093 1.318.598 2.652.943 3.94.943 2.922 0 5.094-1.647 5.919-3.236.898-1.798.824-4.824-1.47-7.416zM6.49 17.042c.03.899.793 1.648 1.708 1.648h.06a1.688 1.688 0 0 0 1.648-1.768c0-.9-.779-1.647-1.693-1.647h-.06c-.06 0-.15 0-.226.029-1.243-2.098-1.768-4.347-1.572-6.772.12-1.828.72-3.417 1.797-4.735.9-1.124 2.593-1.68 3.747-1.708 3.236-.061 4.585 3.971 4.689 5.574l1.498.45C17.741 3.197 14.686.62 11.764.62 9.02.62 6.49 2.613 5.47 5.535 4.077 9.43 4.991 13.177 6.7 16.174c-.15.195-.24.539-.21.868z",
 	"M1.125 0C.502 0 0 .502 0 1.125v21.75C0 23.498.502 24 1.125 24h21.75c.623 0 1.125-.502 1.125-1.125V1.125C24 .502 23.498 0 22.875 0zm17.363 9.75c.612 0 1.154.037 1.627.111a6.38 6.38 0 0 1 1.306.34v2.458a3.95 3.95 0 0 0-.643-.361 5.093 5.093 0 0 0-.717-.26 5.453 5.453 0 0 0-1.426-.2c-.3 0-.573.028-.819.086a2.1 2.1 0 0 0-.623.242c-.17.104-.3.229-.393.374a.888.888 0 0 0-.14.49c0 .196.053.373.156.529.104.156.252.304.443.444s.423.276.696.41c.273.135.582.274.926.416.47.197.892.407 1.266.628.374.222.695.473.963.753.268.279.472.598.614.957.142.359.214.776.214 1.253 0 .657-.125 1.21-.373 1.656a3.033 3.033 0 0 1-1.012 1.085 4.38 4.38 0 0 1-1.487.596c-.566.12-1.163.18-1.79.18a9.916 9.916 0 0 1-1.84-.164 5.544 5.544 0 0 1-1.512-.493v-2.63a5.033 5.033 0 0 0 3.237 1.2c.333 0 .624-.03.872-.09.249-.06.456-.144.623-.25.166-.108.29-.234.373-.38a1.023 1.023 0 0 0-.074-1.089 2.12 2.12 0 0 0-.537-.5 5.597 5.597 0 0 0-.807-.444 27.72 27.72 0 0 0-1.007-.436c-.918-.383-1.602-.852-2.053-1.405-.45-.553-.676-1.222-.676-2.005 0-.614.123-1.141.369-1.582.246-.441.58-.804 1.004-1.089a4.494 4.494 0 0 1 1.47-.629 7.536 7.536 0 0 1 1.77-.201zm-15.113.188h9.563v2.166H9.506v9.646H6.789v-9.646H3.375z",
 ];
-const itemAmount = 5;
+const itemAmount = 7;
 
 let step = 0,
 	startOffset = 0;
 
-const drawElement = () => {
+const createElement = () => {
 	let liElem = document.createElement("li");
+	liElem.setAttribute("id", `${step}`);
 	liElem.classList.add("skills__item");
 	liElem.style.left = startOffset * 10 + "vw";
 
@@ -21,25 +23,25 @@ const drawElement = () => {
 	svgElem.setAttribute("xmlns", "http://www.w3.org/2000/svg");
 	svgElem.setAttribute("viewBox", "0 0 24 24");
 	svgElem.setAttribute("stroke", "black");
-	svgElem.classList.add("svg");
-	svgElem.classList.add(`svg${step}`);
+	svgElem.classList.add("skills__svg");
+	svgElem.classList.add(`skills__svg${step}`);
 	liElem.appendChild(svgElem);
 
 	let pathElem = document.createElementNS("http://www.w3.org/2000/svg", "path");
-	pathElem.setAttribute("d", svgArr[step]);
+	pathElem.setAttribute("d", pathArr[step]);
 	svgElem.appendChild(pathElem);
 
-	document.querySelector(".skills__list").appendChild(liElem);
+	skillsList.appendChild(liElem);
 	step + 1 === itemAmount ? (step = 0) : step++;
 	startOffset++;
 };
 
-for (let i = 0; i < itemAmount; i++) {
-	drawElement();
+for (let i = 0; i < itemAmount - 2; i++) {
+	createElement();
 }
 
 const sliderScroll = () => {
-	drawElement();
+	createElement();
 	let allSkills = Array.from(document.querySelectorAll(".skills__item"));
 	let secondOffset = 0;
 	allSkills.map((item) => {
@@ -52,11 +54,24 @@ const sliderScroll = () => {
 
 	setTimeout(() => {
 		allSkills[0].remove();
-		allSkills[allSkills.length - 1].classList.remove("slider-right");
 	}, 2000);
 };
 
 export function runSlider() {
+	skillsList.addEventListener("click", (e) => {
+		const descrContainer = document.querySelector(".skills__descr-box");
+		let target = e.target.closest("li").id;
+		let targetDescr = document.querySelector(`.skills__descr-${target}`);
+
+		descrContainer.classList.add("active");
+		targetDescr.classList.add("active");
+		descrContainer.addEventListener("click", (e) => {
+			descrContainer.classList.remove("active");
+			targetDescr.classList.remove("active");
+		})
+	});
+	
+
 	let sliderTimer = setInterval(sliderScroll, 2015);
 	document.querySelector(".skills").addEventListener("mouseenter", () => {
 		if (sliderTimer) {
@@ -64,7 +79,6 @@ export function runSlider() {
 			sliderTimer = "";
 		}
 	});
-
 	document.querySelector(".skills").addEventListener("mouseleave", () => {
 		sliderTimer = setInterval(sliderScroll, 2015);
 	});
