@@ -83,6 +83,7 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	text-align: center;
 	margin: 0 auto;
 	padding: 1vh;
 	min-width: 10vw;
@@ -97,34 +98,16 @@
 	z-index: 2;
 }
 
-.skills__descr-0.active,
-.skills__descr-1.active,
-.skills__descr-2.active,
-.skills__descr-3.active,
-.skills__descr-4.active,
-.skills__descr-5.active,
-.skills__descr-6.active {
+.skills__descr-box > article.active {
 	transform: scale(1);
 	transition: all 2s;
 }
-.skills__descr-0.active,
-.skills__descr-1.active,
-.skills__descr-2.active,
-.skills__descr-3.active,
-.skills__descr-4.active,
-.skills__descr-5.active,
-.skills__descr-6.active > h3 {
-	margin: 2vh 1vw;
+.skills__descr-box > article > h3 {
+	margin: 0 1vw 1vh 0;
 	font-size: calc(var(--font-size) / 1.5);
 }
 
-.skills__descr-0.active,
-.skills__descr-1.active,
-.skills__descr-2.active,
-.skills__descr-3.active,
-.skills__descr-4.active,
-.skills__descr-5.active,
-.skills__descr-6.active > p {
+.skills__descr-box > article > p {
 	font-size: calc(var(--font-size) / 2);
 }
 
