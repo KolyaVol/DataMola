@@ -4,7 +4,7 @@
 
 .skills__list {
 	display: flex;
-	justify-content: space-evenly;
+	justify-content: flex-start;
 	align-items: center;
 	width: 100%;
 	height: 100%;
@@ -110,6 +110,62 @@
 .skills__descr-box > article > p {
 	font-size: calc(var(--font-size) / 2);
 }
+
+.skills__progress-box {
+	position: relative;
+	width: 90%;
+	height: 3vh;
+	box-shadow: var(--shadow);
+	border-radius: 1vw;
+	margin-bottom: 1vh;
+}
+
+.skills__progress-box > span {
+	height: 100%;
+	color: #fff;
+	font-size: calc(var(--font-size) / 2);
+	border-radius: 1vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+}
+
+.skills__progress-html {
+	width: 90%;
+	background-color: #e34f26;
+}
+
+.skills__progress-css {
+	width: 85%;
+	background-color: #1572b6;
+}
+
+.skills__progress-git {
+	width: 80%;
+	background-color: #f05032;
+}
+
+.skills__progress-js {
+	width: 60%;
+	background-color: #f7df1e;
+}
+
+.skills__progress-react {
+	width: 60%;
+	background-color: #61dafb;
+}
+
+.skills__progress-redux {
+	width: 50%;
+	background-color: #764abc;
+}
+
+.skills__progress-ts {
+	width: 30%;
+	background-color: #3178c6;
+}
+
 
 @keyframes slider-right {
 	0% {
