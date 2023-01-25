@@ -29,7 +29,8 @@
 
 .about-me__title {
 	grid-area: am-title;
-	font-size: var(--font-size);
+	margin: 0 auto;
+	font-size: calc(var(--font-size)*2) ;
 }
 
 .about-me__photo {

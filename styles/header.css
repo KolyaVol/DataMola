@@ -14,7 +14,7 @@
 	cursor: default;
 	position: absolute;
 	margin: auto;
-	font-size: calc(var(--font-size) * 2);
+	font-size: calc(var(--font-size) * 3);
 	font-weight: 700;
 	font-family: "Courier New", Courier, monospace;
 	animation: flicker 6s infinite;

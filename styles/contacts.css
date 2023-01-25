@@ -1,0 +1,32 @@
+.contacts {
+    grid-area: contacts;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contacts > h2 {
+    font-size: calc(var(--font-size)*2);
+}
+
+.contacts__list {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 100%;
+
+}
+
+.contacts__list > span {
+    margin: 2vh 0;
+    min-width: 20rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: calc(var(--font-size));
+}
+
+.contacts__list > span > svg {
+    width: 4rem;
+    margin-right: 1vw;
+}
