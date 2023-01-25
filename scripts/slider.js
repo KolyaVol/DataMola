@@ -54,6 +54,7 @@ const sliderScroll = () => {
 
 	setTimeout(() => {
 		allSkills[0].remove();
+		allSkills[6].remove();
 	}, 2000);
 };
 
@@ -65,7 +66,7 @@ export function runSlider() {
 
 		descrContainer.classList.add("active");
 		targetDescr.classList.add("active");
-		descrContainer.addEventListener("click", (e) => {
+		descrContainer.addEventListener("click", () => {
 			descrContainer.classList.remove("active");
 			targetDescr.classList.remove("active");
 		})

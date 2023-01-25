@@ -14,19 +14,48 @@
     justify-content: space-evenly;
     flex-wrap: wrap;
     width: 100%;
+    margin-top: 5vh;
 
 }
 
-.contacts__list > span {
+.contacts__list > a {
     margin: 2vh 0;
     min-width: 20rem;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: calc(var(--font-size));
+    text-decoration: none;
+    transition: all 1s;
 }
 
-.contacts__list > span > svg {
-    width: 4rem;
+.contacts__list > a > svg {
+    width: 6rem;
     margin-right: 1vw;
+}
+
+.contacts__list > a:hover {
+    transition: all 1s;
+    transform: translateY(-1vh);
+    
+}
+
+.github {
+    color: #181717;
+    fill: #181717;
+}
+
+.linkedIn {
+    color: #0A66C2;
+    fill: #0A66C2;
+}
+
+.telegram {
+    color: #26A5E4;
+    fill: #26A5E4;
+}
+
+.vkontakte {
+    color: #0077FF;
+    fill: #0077FF;
 }

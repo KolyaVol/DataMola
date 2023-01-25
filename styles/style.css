@@ -23,7 +23,7 @@ body {
 	left: 0;
 	display: grid;
 	grid-template-columns: 1fr 4fr 1fr;
-	grid-template-rows: 100vh 100vh 30vh 30vh;
+	grid-template-rows: 100vh 100vh 40vh 40vh;
 	grid-template-areas:
 		"header header header"
 		". about-me . "
@@ -36,6 +36,6 @@ body {
 		--font-size: 4vw;
 	}
 	.header__owerlay {
-		width: 5%;
+		width: 5vw;
 	}
 }

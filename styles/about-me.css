@@ -27,6 +27,10 @@
 	padding: 2rem;
 }
 
+.about-me > article > h3 {
+	margin: 1vh 0;
+}
+
 .about-me__title {
 	grid-area: am-title;
 	margin: 0 auto;
