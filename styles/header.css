@@ -67,3 +67,14 @@
 			0 0 1rem rgb(188, 42, 207);
 	}
 }
+
+@media (max-width: 700px) {
+	:root {
+		--font-size: 4vw;
+	}
+	.header__owerlay {
+		width: 5vw;
+	}
+
+	
+}

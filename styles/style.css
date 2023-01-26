@@ -14,7 +14,7 @@ html {
 	text-shadow: var(--shadow);
 	scroll-behavior: smooth;
 	--font-size: 2vw;
-	--shadow: 0 0 1em rgb(124, 124, 160), 0 0 0.2em rgb(141, 141, 165);
+	--shadow: 0 0 1rem rgb(124, 124, 160), 0 0 0.2rem rgb(141, 141, 165);
 }
 
 body {
@@ -31,11 +31,11 @@ body {
 		". contacts .";
 }
 
-@media (max-width: 700px) {
-	:root {
-		--font-size: 4vw;
+@media (max-width: 800px) {
+	body {
+		grid-template-rows: 100vh max-content 40vh 40vh;
 	}
-	.header__owerlay {
-		width: 5vw;
-	}
+	
+
+	
 }

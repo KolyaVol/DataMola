@@ -16,12 +16,12 @@
 
 .burger__icon {
 	position: absolute;
-	right: -6rem;
+	right: -10vw;
 	display: flex;
 	flex-direction: column;
-	width: 3vw;
+	width: 6rem;
 	height: 2rem;
-	margin: 1rem 0 0 1rem;
+	margin: 1rem 0 0 2rem;
 	cursor: pointer;
 }
 
@@ -34,25 +34,25 @@
 	border-radius: 0.3rem;
 	margin: 0.6rem;
 	border: #000 4px solid;
-	transition: transform margin 1s;
+	transition: all 1s;
 	top: 0;
 	animation: box-flicker 6s infinite;
 }
 
 .burger.active .burger__icon > div {
-	transition: transform margin 1s;
+	transition: all 1s;
 	transform: rotate(45deg);
 	margin-top: -1.45rem;
 }
 
 .burger.active .burger__icon::before {
-	transition: transform margin 1s;
+	transition: all 1s;
 	transform: rotate(-45deg);
 	margin-top: 2rem;
 }
 
 .burger.active .burger__icon::after {
-	transition: transform margin 1s;
+	transition: all 1s;
 	top: -1.5rem;
 	opacity: 0;
 }

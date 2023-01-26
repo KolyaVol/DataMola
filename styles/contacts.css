@@ -19,10 +19,11 @@
 }
 
 .contacts__list > a {
+    position: relative;
     margin: 2vh 0;
     min-width: 20rem;
     display: flex;
-    justify-content: center;
+    
     align-items: center;
     font-size: calc(var(--font-size));
     text-decoration: none;
@@ -32,6 +33,7 @@
 .contacts__list > a > svg {
     width: 6rem;
     margin-right: 1vw;
+    left: 1rem;
 }
 
 .contacts__list > a:hover {
