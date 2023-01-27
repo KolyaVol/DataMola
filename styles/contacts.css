@@ -5,7 +5,7 @@
     align-items: center;
 }
 
-.contacts > h2 {
+.contacts__title {
     font-size: calc(var(--font-size)*2);
 }
 
@@ -60,4 +60,11 @@
 .vkontakte {
     color: #0077FF;
     fill: #0077FF;
+}
+
+@media (max-width: 800px) {
+	.contacts__title {
+    font-size: calc(var(--font-size)*1.5);
+
+}
 }

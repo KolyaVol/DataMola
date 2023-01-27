@@ -5,6 +5,7 @@
 	top: 0;
 	left: -15vw;
 	width: 15vw;
+	height: 200vh;
 	transition: all 1s ease-in-out;
 	z-index: 6;
 }
@@ -16,13 +17,14 @@
 
 .burger__icon {
 	position: absolute;
-	right: -10vw;
+	right: -5rem;
 	display: flex;
 	flex-direction: column;
-	width: 6rem;
-	height: 2rem;
+	width: 4rem;
+	height: 8rem;
 	margin: 1rem 0 0 2rem;
 	cursor: pointer;
+	transition: all 1s;
 }
 
 .burger__icon > div,
@@ -33,10 +35,15 @@
 	width: 100%;
 	border-radius: 0.3rem;
 	margin: 0.6rem;
-	border: #000 4px solid;
+	border: #000 0.2rem solid;
 	transition: all 1s;
 	top: 0;
 	animation: box-flicker 6s infinite;
+}
+
+.burger.active .burger__icon {
+	transition: all 1s;
+	right: 2rem;
 }
 
 .burger.active .burger__icon > div {
@@ -48,6 +55,7 @@
 .burger.active .burger__icon::before {
 	transition: all 1s;
 	transform: rotate(-45deg);
+	top: -0.3rem;
 	margin-top: 2rem;
 }
 
@@ -59,7 +67,7 @@
 
 .nav {
 	width: 100%;
-	height: 100vh;
+	height: 100%;
 	background-color: #fff;
 	transition: all 1s ease-in-out;
 	opacity: 0;
@@ -75,7 +83,9 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	justify-content: space-evenly;
 	width: 100%;
+	height: 30%;
 	margin-top: 2vh;
 }
 
@@ -87,35 +97,56 @@
 	cursor: pointer;
 	text-decoration: none;
 	font-size: calc(var(--font-size) * 2 / 3);
-	color: red;
+	color: #000;
 }
 
 @keyframes box-flicker {
 	0% {
-		border-color: rgb(202, 33, 224);
-		box-shadow: 0 0 0.1rem rgb(224, 33, 97), 0 0 0.4rem rgb(202, 33, 224),
-			0 0 1rem rgb(188, 42, 207);
+		border-color: rgb(228, 228, 228);
+		box-shadow: 0 0 0.1rem rgb(228, 228, 228), 0 0 0.4rem rgb(228, 228, 228),
+			0 0 1rem rgb(228, 228, 228);
 	}
 	25% {
-		border-color: rgb(92, 17, 189);
-		box-shadow: 0 0 1rem rgb(92, 17, 189), 0 0 0.4rem rgb(92, 17, 189),
-			0 0 1rem rgb(132, 44, 248);
+		border-color: rgb(168, 165, 173);
+		box-shadow: 0 0 1rem rgb(168, 165, 173), 0 0 0.4rem rgb(168, 165, 173),
+			0 0 1rem rgb(168, 165, 173);
 	}
 
 	50% {
-		border-color: rgb(45, 3, 161);
-		box-shadow: 0 0 1rem rgb(45, 3, 161), 0 0 0.4rem rgb(45, 3, 161),
-			rgb(100, 49, 241);
+		border-color: rgb(37, 36, 39);
+		box-shadow: 0 0 1rem rgb(37, 36, 39), 0 0 0.4rem rgb(37, 36, 39),
+			rgb(37, 36, 39);
 	}
 	75% {
-		border-color: rgb(92, 17, 189);
-		box-shadow: 0 0 1rem rgb(92, 17, 189), 0 0 0.4rem rgb(92, 17, 189),
-			0 0 1rem rgb(132, 44, 248);
+		border-color: rgb(168, 165, 173);
+		box-shadow: 0 0 1rem rgb(168, 165, 173), 0 0 0.4rem rgb(168, 165, 173),
+			0 0 1rem rgb(168, 165, 173);
 	}
 
 	100% {
-		border-color: rgb(202, 33, 224);
-		box-shadow: 0 0 0.1rem rgb(224, 33, 97), 0 0 0.4rem rgb(202, 33, 224),
-			0 0 1rem rgb(188, 42, 207);
+		border-color: rgb(228, 228, 230);
+		box-shadow: 0 0 0.1rem rgb(228, 228, 230), 0 0 0.4rem rgb(228, 228, 230),
+			0 0 1rem rgb(228, 228, 230);
 	}
+}
+
+@media (max-width: 1200px) {
+.burger{
+	width: 20vw;
+	left: -20vw;
+}
+}
+
+@media (max-width: 900px) {
+.burger{
+	width: 30vw;
+	left: -30vw;
+}
+}
+
+@media (max-width: 500px) {
+.burger{
+	width: 100vw;
+	left: -100vw;
+}
 }

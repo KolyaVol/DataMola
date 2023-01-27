@@ -54,7 +54,7 @@ const sliderScroll = () => {
 
 	setTimeout(() => {
 		allSkills[0].remove();
-		allSkills[6].remove();
+		if (allSkills[6]) allSkills[6].remove();
 	}, 2000);
 };
 
@@ -69,9 +69,8 @@ export function runSlider() {
 		descrContainer.addEventListener("click", () => {
 			descrContainer.classList.remove("active");
 			targetDescr.classList.remove("active");
-		})
+		});
 	});
-	
 
 	let sliderTimer = setInterval(sliderScroll, 2015);
 	document.querySelector(".skills").addEventListener("mouseenter", () => {

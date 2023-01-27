@@ -6,7 +6,7 @@
 }
 
 .skills__title {
-	font-size: calc(var(--font-size)*2);
+	font-size: calc(var(--font-size) * 2);
 }
 
 .skills__list {
@@ -45,11 +45,9 @@
 .skills__svg {
 	margin: 0 1vw;
 }
-
 .skills__svg0 {
 	fill: #e34f26;
 }
-
 .skills__svg1 {
 	fill: #1572b6;
 }
@@ -135,7 +133,6 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	
 }
 
 .skills__progress-html {
@@ -173,7 +170,6 @@
 	background-color: #3178c6;
 }
 
-
 @keyframes slider-right {
 	0% {
 		transform: rotate3d(0, 1, 0, 70deg);
@@ -195,5 +191,15 @@
 	100% {
 		transform: rotate3d(0, 1, 0, 70deg);
 		opacity: 0;
+	}
+}
+
+@media (max-width: 800px) {
+	.skills__title {
+		font-size: calc(var(--font-size) * 1.5);
+	}
+	.skills__list {
+		width: 80%;
+		
 	}
 }

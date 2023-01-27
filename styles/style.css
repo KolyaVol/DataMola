@@ -33,7 +33,8 @@ body {
 
 @media (max-width: 800px) {
 	body {
-		grid-template-rows: 100vh max-content 40vh 40vh;
+		grid-template-columns: 1fr 10fr 1fr;
+		grid-template-rows: 100vh max-content 30vh 40vh;
 	}
 	
 
