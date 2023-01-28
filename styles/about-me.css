@@ -2,7 +2,7 @@
 	grid-area: about-me;
 	display: grid;
 	grid-template-columns: repeat(2, minmax(15rem, 1fr));
-	grid-template-rows: 1fr 2fr 3fr 3fr;
+	grid-template-rows: 1fr 2fr 3fr max-content;
 	grid-template-areas:
 		"am-title am-title"
 		"am-photo pers-data"

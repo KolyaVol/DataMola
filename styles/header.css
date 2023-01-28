@@ -8,7 +8,6 @@
 	background: url(../Images/waterfall.jpg) center no-repeat;
 	background-size: cover;
 	z-index: 3;
-	padding: 0;
 }
 
 .header__name {
@@ -17,7 +16,7 @@
 	margin: auto;
 	font-size: calc(var(--font-size) * 3);
 	font-weight: 700;
-	font-family: "Courier New", Courier, monospace;
+	font-family: 'Solitreo', cursive;
 	animation: flicker 6s infinite;
 	z-index: 5;
 }

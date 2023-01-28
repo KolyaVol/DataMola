@@ -24,7 +24,7 @@ body {
 	left: 0;
 	display: grid;
 	grid-template-columns: 1fr 4fr 1fr;
-	grid-template-rows: 100vh minmax(80rem, 100vh) minmax(30rem, 40vh) minmax(
+	grid-template-rows: 100vh minmax(80rem, max-content) minmax(30rem, 30vh) minmax(
 			30rem,
 			40vh
 		);
@@ -33,6 +33,10 @@ body {
 		". about-me . "
 		". skills ."
 		". contacts .";
+}
+
+h1, h2, h3 {
+	font-family: 'Solitreo', cursive;
 }
 
 @media (max-width: 800px) {
