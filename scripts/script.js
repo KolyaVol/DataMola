@@ -17,6 +17,5 @@ for (let elm of elements) {
 }
 
 drawFullOwerlay();
-
 runSlider();
 useBurger();

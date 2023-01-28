@@ -93,6 +93,18 @@
 	transition: all 1s;
 }
 
+.about-me > article > p > a {
+	text-decoration: none;
+	color: #000;
+	cursor: pointer;
+	transition: all 1s;
+}
+
+.about-me > article > p > a:hover {
+	transition: all 1s;
+	color: blue;
+}
+
 @media (max-width: 800px) {
 	.about-me {
 		justify-items: center;

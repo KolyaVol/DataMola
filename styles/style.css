@@ -18,12 +18,16 @@ html {
 }
 
 body {
+	font-family: Arial, Helvetica, sans-serif;
 	position: absolute;
 	top: 0;
 	left: 0;
 	display: grid;
 	grid-template-columns: 1fr 4fr 1fr;
-	grid-template-rows: 100vh 100vh 40vh 40vh;
+	grid-template-rows: 100vh minmax(80rem, 100vh) minmax(30rem, 40vh) minmax(
+			30rem,
+			40vh
+		);
 	grid-template-areas:
 		"header header header"
 		". about-me . "
@@ -36,7 +40,4 @@ body {
 		grid-template-columns: 1fr 10fr 1fr;
 		grid-template-rows: 100vh max-content 30vh 40vh;
 	}
-	
-
-	
 }
