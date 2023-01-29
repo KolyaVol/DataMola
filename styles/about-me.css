@@ -32,6 +32,7 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	text-align: justify;
 }
 
 .about-me article::after {
@@ -75,6 +76,14 @@
 	transition: all 1s;
 }
 
+.about-me__descr {
+	grid-area: am-descr;
+	position: relative;
+	bottom: -10vw;
+	opacity: 0;
+	transition: all 1s;
+}
+
 .about-me__education.elem-show,
 .about-me__pers-data.elem-show,
 .about-me__photo.elem-show,
@@ -85,13 +94,7 @@
 	left: 0;
 }
 
-.about-me__descr {
-	grid-area: am-descr;
-	position: relative;
-	opacity: 0;
-	bottom: -10vw;
-	transition: all 1s;
-}
+
 
 .about-me > article > p > a {
 	text-decoration: none;
